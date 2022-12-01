@@ -17,7 +17,7 @@ class AddTester extends AnyFlatSpec with ChiselScalatestTester {
     test(new Add) { dut =>
       for (a <- 0 to 2) {
         for (b <- 0 to 3) {
-          val result = a + b
+          val result = a * b
           dut.io.a.poke(a.U)
           dut.io.b.poke(b.U)
           dut.clock.step(1)
